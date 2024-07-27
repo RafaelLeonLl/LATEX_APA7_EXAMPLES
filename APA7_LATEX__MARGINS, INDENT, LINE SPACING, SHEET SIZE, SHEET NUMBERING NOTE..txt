@@ -1,0 +1,99 @@
+\documentclass[12pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[english]{babel}
+
+
+%-----------------------------------------------------------------------------
+% For filler text
+\usepackage{lipsum}  
+\usepackage{titletoc}
+
+
+%-----------------------------------------------------------------------------
+%	FONT TYPE
+\usepackage{mathptmx}\usepackage{newtxtext}\usepackage{newtxmath}
+
+
+%-----------------------------------------------------------------------------
+%	PAGE SIZE AND MARGINS
+\usepackage{geometry}
+%	\geometry{papersize={Page width, Page height}, left=2.54 cm, right=2.54cm, top=2.54cm}, 
+% using 2.54cm as it is equivalent to 1 inch, a unit of measurement used in the USA and UK
+\geometry{papersize={21.59cm,27.94cm}, 
+	left=2.54cm, 
+	right=2.54cm, 
+	top=2.54cm, 
+	bottom=2.54cm
+}
+
+
+%-----------------------------------------------------------------------------
+%	PAGE NUMBERING
+\usepackage{fancyhdr}
+
+	% Page numbering configuration
+	\pagestyle{fancy}
+	\fancyhf{}
+	\fancyhead[R]{\thepage}
+	\renewcommand{\headrulewidth}{0pt}
+
+	% Configuration for Roman numerals
+	\newcommand{\startromanpages}{
+    \pagenumbering{roman}
+    \setcounter{page}{1}
+	}
+
+	% Configuration for Arabic numerals
+	\newcommand{\startarabicpages}{
+    \pagenumbering{arabic}
+    \setcounter{page}{1}
+	}
+
+
+%-----------------------------------------------------------------------------
+%	LINE SPACING
+\usepackage{setspace}
+% APA 7 uses double line spacing
+% \doublespacing >> double spacing (2.0) >> FOR APA 7TH EDITION
+% \onehalfspace  >> 1.5 line spacing
+% \singlespace   >> single spacing
+% \spacing {desired spacing}
+% Using double spacing
+\doublespacing
+
+
+%-----------------------------------------------------------------------------
+%	INDENTATION
+\usepackage{indentfirst}
+% Setting the indentation to 5 spaces
+\setlength{\parindent}{5ex}
+
+
+%-----------------------------------------------------------------------------
+\begin{document}
+%-----------------------------------------------------------------------------
+% COVER PAGE
+\pagenumbering{gobble} % SKIP PAGE NUMBERING AS IT IS THE COVER PAGE
+\title{BASIC TEMPLATE FOR APA 7TH EDITION}
+\author{Enter your name}
+\date{}
+\maketitle
+
+%-----------------------------------------------------------------------------
+\newpage
+\startromanpages
+\tableofcontents
+
+\newpage
+\listoftables
+
+\newpage
+\listoffigures
+\newpage
+
+%-----------------------------------------------------------------------------
+\pagenumbering{arabic}
+\section{Introduction}
+\lipsum[1-4] % Example text
+
+\end{document}
